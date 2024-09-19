@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Machine Learning Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #fff;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ol {
+            padding-left: 10px;
+        }
+        
+   
+        strong {
+            color: #0056b3;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            position: relative;
+        }
+        li.checked {
+            background: #25D366; /* Light green background */
+            opacity: .9;
+        }
+        .checkbox {
+            position: absolute;
+            left: -25px; /* Positioning checkbox to the left */
+            top: 50%;
+            transform: translateY(-50%);
+            display: none; /* Hide the checkbox */
+        }
+        .checkbox:checked + span {
+            color: #28a745; /* Green color for checked items */
+        }
+    </style>
+</head>
+<body>
+    <h1>Machine Learning Topics</h1>
+    <ol>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What is Machine Learning?</strong> - A field of AI focused on enabling machines to learn from data.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>AI Vs ML Vs DL for Beginners in Hindi</strong> - Differences between Artificial Intelligence, Machine Learning, and Deep Learning.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Types of Machine Learning for Beginners</strong> - Overview of supervised, unsupervised, and reinforcement learning.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Batch Machine Learning</strong> - Learning from a complete dataset at once.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Online Machine Learning</strong> - Learning incrementally from data streams.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Instance-Based Vs Model-Based Learning</strong> - Comparison of learning from examples vs. learning a model.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Challenges in Machine Learning</strong> - Common obstacles like overfitting, underfitting, and data quality issues.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Application of Machine Learning</strong> - Use cases in healthcare, finance, marketing, etc.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Machine Learning Development Life Cycle</strong> - Stages from data collection to model deployment.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Data Engineer Vs Data Analyst Vs Data Scientist Vs ML Engineer</strong> - Roles and responsibilities in data and ML fields.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What are Tensors</strong> - Multi-dimensional arrays used in ML and Deep Learning.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Installing Anaconda For Data Science</strong> - Setting up Anaconda for a data science environment.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>End to End Toy Project</strong> - A simple ML project from data collection to model deployment.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>How to Frame a Machine Learning Problem</strong> - Defining objectives and metrics for ML tasks.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Working with CSV files</strong> - Handling data in Comma-Separated Values format.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Working with JSON/SQL</strong> - Managing data in JSON format and SQL databases.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Fetching Data From an API</strong> - How to retrieve data from application programming interfaces.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Fetching data using Web Scraping</strong> - Extracting data from websites programmatically.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Understanding Your Data</strong> - Importance of data exploration and insights.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>EDA using Univariate Analysis</strong> - Analyzing single variables for insights.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>EDA using Bivariate and Multivariate Analysis</strong> - Exploring relationships between multiple variables.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Pandas Profiling</strong> - Generating reports for quick data analysis using Pandas.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What is Feature Engineering</strong> - Process of selecting and transforming features for better model performance.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Feature Scaling - Standardization</strong> - Normalizing data to have a mean of 0 and standard deviation of 1.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Feature Scaling - Normalization</strong> - Rescaling features to a range, typically [0, 1].</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Encoding Categorical Data</strong> - Converting categorical variables into numerical format.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>One Hot Encoding</strong> - A method of converting categorical data into binary format.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Column Transformer in Machine Learning</strong> - Applying different transformations to different columns of data.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Machine Learning Pipelines A-Z</strong> - Structuring end-to-end ML workflows efficiently.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Function Transformer</strong> - Custom transformations in ML pipelines.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Power Transformer</strong> - A technique to stabilize variance and make the data more Gaussian-like.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Binning and Binarization</strong> - Grouping continuous data into discrete bins and converting variables into binary.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Handling Mixed Variables</strong> - Techniques for dealing with different data types in datasets.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Imputation Techniques</strong> - Methods to handle missing data in datasets.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>How to Select Features</strong> - Methods for selecting important features for modeling.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Data Leakage in Machine Learning</strong> - Understanding and avoiding data leakage in model training.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What are ML Models</strong> - Overview of machine learning models and algorithms.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What is Linear Regression</strong> - Understanding linear regression for predictive modeling.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Understanding Logistic Regression</strong> - Using logistic regression for binary classification.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Support Vector Machines (SVM)</strong> - A powerful algorithm for classification tasks.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Decision Trees</strong> - A popular method for classification and regression tasks.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Random Forests</strong> - An ensemble method using multiple decision trees for better accuracy.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>K-Nearest Neighbors (KNN)</strong> - A simple, instance-based learning algorithm.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Gradient Boosting Machines (GBM)</strong> - An ensemble technique to improve prediction accuracy.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Deep Learning Fundamentals</strong> - Introduction to deep learning concepts and frameworks.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What are Neural Networks</strong> - Basics of neural networks and their architecture.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Convolutional Neural Networks (CNN)</strong> - Specialized networks for image processing.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Recurrent Neural Networks (RNN)</strong> - Networks designed for sequential data.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Transfer Learning</strong> - Utilizing pre-trained models for new tasks.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>What is Overfitting and Underfitting</strong> - Understanding model performance issues.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Hyperparameter Tuning</strong> - Techniques for optimizing model performance.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Cross-Validation Techniques</strong> - Methods to evaluate model performance effectively.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Confusion Matrix</strong> - A tool for assessing classification model performance.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Precision, Recall, and F1 Score</strong> - Key metrics for evaluating models.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>ROC and AUC</strong> - Understanding Receiver Operating Characteristic and Area Under Curve.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Understanding Model Interpretability</strong> - Importance of interpreting ML models.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Introduction to Natural Language Processing</strong> - Basics of NLP and its applications.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Text Preprocessing Techniques</strong> - Methods for cleaning and preparing text data.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Sentiment Analysis</strong> - Understanding sentiments from text data.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Topic Modeling</strong> - Techniques to extract topics from text.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Time Series Analysis</strong> - Analyzing data points collected or recorded at specific time intervals.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Recommendation Systems</strong> - Building systems that recommend items to users.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Deploying Machine Learning Models</strong> - Strategies for deploying models in production.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Understanding Cloud Computing</strong> - Overview of cloud technologies for ML.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Introduction to Big Data</strong> - Basics of big data and its implications for ML.</span>
+        </li>
+        <li onclick="toggleCheck(this)">
+            <input type="checkbox" class="checkbox" />
+            <span><strong>Machine Learning in Production</strong> - Challenges and strategies for deploying ML models.</span>
+        </li>
+    </ol>
+
+    <script>
+        function toggleCheck(item) {
+            item.classList.toggle('checked');
+        }
+    </script>
+</body>
+</html>
