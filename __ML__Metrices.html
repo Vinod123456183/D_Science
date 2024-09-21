@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Algorithms and Metrics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 15px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .key-metrics {
+            margin-top: 10px;
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Machine Learning Algorithms and Evaluation Metrics</h1>
+
+    <section>
+        <h2>1. Regression Algorithms</h2>
+        <h3>Common Algorithms:</h3>
+        <ul>
+            <li>Linear Regression</li>
+            <li>Decision Trees</li>
+            <li>Random Forests</li>
+            <li>XGBoost</li>
+        </ul>
+        <div class="key-metrics">
+            <h3>Key Metrics:</h3>
+            <ul>
+                <li><strong>Mean Absolute Error (MAE):</strong> Measures average absolute errors.</li>
+                <li><strong>Mean Squared Error (MSE):</strong> Measures average squared errors; sensitive to outliers.</li>
+                <li><strong>Root Mean Squared Error (RMSE):</strong> The square root of MSE; interpretable in the same unit as the target.</li>
+                <li><strong>R² Score:</strong> Indicates the proportion of variance explained by the model.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Classification Algorithms</h2>
+        <h3>Common Algorithms:</h3>
+        <ul>
+            <li>Logistic Regression</li>
+            <li>Decision Trees</li>
+            <li>Random Forests</li>
+            <li>Support Vector Machines</li>
+            <li>K-Nearest Neighbors</li>
+        </ul>
+        <div class="key-metrics">
+            <h3>Key Metrics:</h3>
+            <ul>
+                <li><strong>Accuracy:</strong> The proportion of correctly classified instances.</li>
+                <li><strong>Precision:</strong> The ratio of true positive predictions to total predicted positives.</li>
+                <li><strong>Recall (Sensitivity):</strong> The ratio of true positives to total actual positives.</li>
+                <li><strong>F1 Score:</strong> The harmonic mean of precision and recall; useful for imbalanced classes.</li>
+                <li><strong>Confusion Matrix:</strong> A matrix showing true vs. predicted classifications.</li>
+                <li><strong>ROC-AUC Score:</strong> Measures the area under the ROC curve; useful for binary classification.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Clustering Algorithms</h2>
+        <h3>Common Algorithms:</h3>
+        <ul>
+            <li>K-Means</li>
+            <li>DBSCAN</li>
+            <li>Hierarchical Clustering</li>
+        </ul>
+        <div class="key-metrics">
+            <h3>Key Metrics:</h3>
+            <ul>
+                <li><strong>Silhouette Score:</strong> Measures how similar an object is to its own cluster compared to other clusters.</li>
+                <li><strong>Davies-Bouldin Index:</strong> Evaluates the average similarity ratio of each cluster with the most similar cluster.</li>
+                <li><strong>Adjusted Rand Index (ARI):</strong> Measures the similarity between two data clusterings.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Model Selection and Cross-Validation</h2>
+        <div class="key-metrics">
+            <h3>Cross-Validation Metrics:</h3>
+            <ul>
+                <li><strong>Cross-Validated Accuracy:</strong> Average accuracy from cross-validation folds.</li>
+                <li><strong>Cross-Validated F1 Score:</strong> Average F1 score from cross-validation folds.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Multilabel Classification</h2>
+        <h3>Common Algorithms:</h3>
+        <ul>
+            <li>Logistic Regression (Multilabel)</li>
+            <li>Random Forest (Multilabel)</li>
+        </ul>
+        <div class="key-metrics">
+            <h3>Key Metrics:</h3>
+            <ul>
+                <li><strong>Hamming Loss:</strong> Fraction of incorrect labels.</li>
+                <li><strong>Micro/Macro Averaging:</strong> Average for Precision, Recall, and F1 Score across all classes.</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>
