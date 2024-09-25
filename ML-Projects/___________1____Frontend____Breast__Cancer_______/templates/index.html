@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breast Cancer Prediction Model</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Breast Cancer Prediction Model</h1>
+      <img
+        class="header-image"
+        src="https://th.bing.com/th/id/OIP.58SxJ7xjLJ13OG6VVkLRvQHaDh?w=1120&h=534&rs=1&pid=ImgDetMain"
+        alt="Breast Cancer Prediction"
+      />
+      <form action="/predict" method="POST">
+        <div class="form-group">
+          <label for="features"
+            >Input Breast Cancer Features (comma-separated)</label
+          >
+          <input
+            type="text"
+            id="features"
+            name="feature"
+            required
+            value="{{ request.form['feature'] if request.method == 'POST' else '' }}"
+          />
+          <small
+            >Please enter features separated by commas (e.g., 0.1, 0.2,
+            0.3)</small
+          >
+        </div>
+        <button type="submit">Predict</button>
+        <button type="button" onclick="clearOutput()">Clear Output</button>
+        <button type="button" onclick="clearInput()">Clear Input</button>
+      </form>
+
+      <!-- Message Display -->
+      <div class="my-3" id="messageDisplay">
+        {% if message %}
+        <p>{{ message[0] }}</p>
+        {% if message[0] == 'Not Cancerous' %}
+        <div class="card">
+          <img
+            src="https://th.bing.com/th/id/R.a022fe180974495ada5f1b54441c3d9e?rik=iMSZ1lCdlEm1hw&riu=http%3a%2f%2fwww.womenfitness.net%2fwp%2fwp-content%2fuploads%2f2016%2f11%2feat-healthy.jpg&ehk=0k3qTchpsbQ1uT7oPNS6UXuSTORDsc52WCrb8tMtFbk%3d&risl=&pid=ImgRaw&r=0"
+            alt="Not Cancerous"
+          />
+          <div class="card-body">
+            <h5>Not Cancerous</h5>
+            <p>Don't worry, you don't have Breast Cancer. Enjoy your life.</p>
+          </div>
+        </div>
+        {% else %}
+        <div class="card">
+          <img
+            src="https://imgs.search.brave.com/k2M5Fvh7iykgn5INg61Nb80q--qMNnw4mI4R-Sdu5xs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/MTB4Z2Vub21pY3Mu/Y29tL2ltYWdlL3Vw/bG9hZC93XzEwMDAs/cV9hdXRvLGZfYXV0/byxkcHJfYXV0by92/MTY2NDQ4Njk2OC94/ZW5pdW0tZGF0YXNl/dHMvdHJpcGxlX3Bv/c190c25lLnBuZw"
+            alt="Cancerous"
+          />
+          <div class="card-body">
+            <h5>Cancerous</h5>
+            <p>
+              Alert! You have a Breast Cancer diagnosis, please consult a
+              doctor.
+            </p>
+          </div>
+        </div>
+        {% endif %} {% endif %}
+      </div>
+    </div>
+
+    <script>
+      function clearOutput() {
+        document.getElementById("messageDisplay").innerHTML = ""; // Clear the output message
+      }
+
+      function clearInput() {
+        document.getElementById("features").value = ""; // Clear the input field
+      }
+    </script>
+  </body>
+</html>
